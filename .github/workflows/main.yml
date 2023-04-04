@@ -37,6 +37,4 @@ jobs:
         run: mvn -B test --file pom.xml
 
       - name: Build
-        run:
-          ./mvnw clean
-          mvn -B package --file pom.xml
+        run: mvn clean package -B --file pom.xml
