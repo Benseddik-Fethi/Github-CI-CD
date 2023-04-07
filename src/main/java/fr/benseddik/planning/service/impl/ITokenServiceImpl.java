@@ -24,10 +24,10 @@ public class ITokenServiceImpl implements ITokenService {
     public void saveUserToken(User user, String jwtToken) {
         var token = Token.builder()
                 .user(user)
-                .token(jwtToken)
+                .userToken(jwtToken)
                 .tokenType(TokenType.BEARER)
-                .expired(false)
-                .revoked(false)
+                .isExpired(false)
+                .isRevoked(false)
                 .build();
         tokenRepository.save(token);
     }

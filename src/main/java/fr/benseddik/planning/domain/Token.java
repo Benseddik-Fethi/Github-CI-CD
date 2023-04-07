@@ -4,27 +4,34 @@ import fr.benseddik.planning.domain.enumeration.TokenType;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.io.Serial;
+import java.io.Serializable;
+
 @Getter
 @Setter
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Token {
+public class Token implements Serializable {
+
+    @Serial
+    private static final long serialVersionUID = 1L;
+
   @Id
   @GeneratedValue
-  public Integer id;
+  private Integer id;
 
   @Column(unique = true)
-  public String token;
+  private String userToken;
 
   @Enumerated(EnumType.STRING)
-  public TokenType tokenType = TokenType.BEARER;
+  private TokenType tokenType = TokenType.BEARER;
 
-  public boolean revoked;
+  private boolean isRevoked;
 
-  public boolean expired;
+  private boolean isExpired;
   @ManyToOne
   @JoinColumn(name = "user_id")
-  public User user;
+  private User user;
 }
