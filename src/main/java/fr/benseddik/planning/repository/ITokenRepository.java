@@ -18,5 +18,5 @@ public interface ITokenRepository extends JpaRepository<Token, Integer> {
 
   Optional<Token> findByUserToken(String token);
 
-  
+
 }

@@ -2,6 +2,9 @@ package fr.benseddik.planning.domain.enumeration;
 
 public enum Role {
 
-  ROLE_USER,
-  ROLE_ADMIN
+    ROLE_INTERN,
+    ROLE_ADMIN,
+    ROLE_SUPERVISOR,
+    ROLE_MANAGER,
+    ROLE_ADMINISTRATION
 }

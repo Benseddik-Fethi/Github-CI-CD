@@ -15,11 +15,14 @@ import java.io.Serializable;
 @Entity
 public class Token implements Serializable {
 
-    @Serial
-    private static final long serialVersionUID = 1L;
+
+  @Serial
+  private static final long serialVersionUID = -5805930154209206158L;
 
   @Id
-  @GeneratedValue
+  @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "token_seq")
+  @SequenceGenerator(name = "token_seq", sequenceName = "token_seq", allocationSize = 1, initialValue = 1000)
+  @Column(name = "token_id", nullable = false)
   private Integer id;
 
   @Column(unique = true)

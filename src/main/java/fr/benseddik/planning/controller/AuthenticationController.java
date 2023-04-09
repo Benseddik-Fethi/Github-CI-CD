@@ -1,9 +1,9 @@
 package fr.benseddik.planning.controller;
 
 import fr.benseddik.planning.dto.request.AuthenticationRequest;
+import fr.benseddik.planning.dto.request.RegisterRequest;
 import fr.benseddik.planning.dto.response.AuthenticationResponse;
 import fr.benseddik.planning.service.IAuthenticationService;
-import fr.benseddik.planning.dto.request.RegisterRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
