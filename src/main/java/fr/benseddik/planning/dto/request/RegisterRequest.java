@@ -1,14 +1,12 @@
 package fr.benseddik.planning.dto.request;
 
 import fr.benseddik.planning.domain.enumeration.Role;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.List;
 
-@Data
+@Getter
+@Setter
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor

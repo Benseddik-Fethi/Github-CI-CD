@@ -11,7 +11,6 @@ class GithubCiCdApplicationTests {
     @Test
     void contextLoads() {
         assertDoesNotThrow(() -> {
-        
         });
     }
 
