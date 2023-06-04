@@ -21,7 +21,7 @@ public class UserController {
 
     private final IUserRepository userService;
 
-    @PreAuthorize("hasRole('ROLE_USER')")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     @GetMapping
     public String getAllUsers() {
         log.info("get all users");
