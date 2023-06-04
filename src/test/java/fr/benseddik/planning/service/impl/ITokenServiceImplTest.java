@@ -69,4 +69,11 @@ class ITokenServiceImplTest {
         token.setRevoked(true);
         verify(tokenRepository, times(1)).saveAll(tokens);
     }
+
+    @Test
+    void revokeAllUserTokens_emptyTokens() {
+        when(tokenRepository.findAllValidTokenByUser(user.getId())).thenReturn(new ArrayList<>());
+        tokenService.revokeAllUserTokens(user);
+        verify(tokenRepository, never()).saveAll(anyList());
+    }
 }

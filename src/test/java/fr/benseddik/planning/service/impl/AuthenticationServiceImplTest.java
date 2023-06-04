@@ -8,15 +8,20 @@ import fr.benseddik.planning.dto.request.RegisterRequest;
 import fr.benseddik.planning.dto.response.AuthenticationResponse;
 import fr.benseddik.planning.repository.IUserRepository;
 import fr.benseddik.planning.service.ITokenService;
+import jakarta.servlet.http.HttpServletResponse;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.HttpHeaders;
+import org.springframework.mock.web.MockHttpServletRequest;
+import org.springframework.mock.web.MockHttpServletResponse;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
@@ -47,8 +52,8 @@ class AuthenticationServiceImplTest {
 
     private RegisterRequest registerRequest;
     private User user;
-    private String jwtToken = "jwtToken";
-    private String refreshToken = "refreshToken";
+    private final String jwtToken = "jwtToken";
+    private final String refreshToken = "refreshToken";
     private AuthenticationResponse authResponse;
 
     @BeforeEach
@@ -93,6 +98,28 @@ class AuthenticationServiceImplTest {
         verify(tokenService, times(1)).revokeAllUserTokens(user);
         verify(tokenService, times(1)).saveUserToken(user, jwtToken);
         assertEquals(authResponse, result);
+    }
+
+    @Test
+    void refreshToken() throws IOException {
+        MockHttpServletRequest mockRequest = new MockHttpServletRequest();
+        mockRequest.addHeader(HttpHeaders.AUTHORIZATION, "Bearer " + refreshToken);
+
+        HttpServletResponse mockResponse = new MockHttpServletResponse();
+
+        when(jwtService.extractUsername(refreshToken)).thenReturn(user.getEmail());
+        when(userRepository.findByEmail(user.getEmail())).thenReturn(Optional.of(user));
+        when(jwtService.isTokenValid(refreshToken, user)).thenReturn(true);
+        when(jwtService.generateToken(user)).thenReturn(jwtToken);
+
+        authenticationService.refreshToken(mockRequest, mockResponse);
+
+        verify(jwtService, times(1)).extractUsername(refreshToken);
+        verify(userRepository, times(1)).findByEmail(user.getEmail());
+        verify(jwtService, times(1)).isTokenValid(refreshToken, user);
+        verify(jwtService, times(1)).generateToken(user);
+        verify(tokenService, times(1)).revokeAllUserTokens(user);
+        verify(tokenService, times(1)).saveUserToken(user, jwtToken);
     }
 
 }
