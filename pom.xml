@@ -154,6 +154,13 @@
                         </goals>
                     </execution>
                 </executions>
+                <configuration>
+                    <excludes>
+                        <exclude>src/main/java/fr/benseddik/planning/domain/**</exclude>
+                        <exclude>src/main/java/fr/benseddik/planning/dto/**</exclude>
+                        <exclude>**/GithubCiCdApplication.class</exclude>
+                    </excludes>
+                </configuration>
             </plugin>
         </plugins>
     </build>
