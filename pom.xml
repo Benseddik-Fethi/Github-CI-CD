@@ -20,7 +20,7 @@
         <sonar.scm.disabled>true</sonar.scm.disabled>
         <sonar.coverage.exclusions>
             src/main/java/fr/benseddik/planning/domain/*,
-            src/main/java/fr/benseddik/planning/dto/*,
+            src/main/java/fr/benseddik/planning/dto/**/*,
         </sonar.coverage.exclusions>
         <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
         <sonar.jacoco.reportPath>${project.basedir}/../target/jacoco.exec</sonar.jacoco.reportPath>
