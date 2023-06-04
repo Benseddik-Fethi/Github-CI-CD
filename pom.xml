@@ -26,6 +26,7 @@
         <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
         <sonar.jacoco.reportPath>${project.basedir}/../target/jacoco.exec</sonar.jacoco.reportPath>
         <sonar.language>java</sonar.language>
+        <sonar.analysis.locale>fr</sonar.analysis.locale>
         <jwt.version>0.11.5</jwt.version>
         <openapi.version>2.1.0</openapi.version>
         <java.version>17</java.version>
