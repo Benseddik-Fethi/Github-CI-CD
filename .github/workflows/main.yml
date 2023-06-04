@@ -59,6 +59,14 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONARQUBE_ACCESS_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONARQUBE_URL }}
         run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
+        with:
+          args: >
+            -Dsonar.projectKey=planning
+            -Dsonar.organization=planning
+            -Dsonar.qualitygate.coverage.threshold=60
+            -Dsonar.qualitygate.lines_to_cover.threshold=60
+            -Dsonar.qualitygate.uncovered_lines.threshold=60
+            -Dsonar.exclusions=src/main/java/fr/benseddik/planning/dto/**/*,src/main/java/fr/benseddik/planning/domain/*
 
       - name: Build Docker Image
         uses: docker/build-push-action@v2
