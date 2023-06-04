@@ -37,7 +37,7 @@ class LogoutServiceTest {
     private Token storedToken;
 
     @Test
-    public void testLogout() {
+     void testLogout() {
 
         when(request.getHeader("Authorization")).thenReturn("Bearer jwt-token");
         when(tokenRepository.findByUserToken(anyString())).thenReturn(Optional.of(storedToken));
@@ -50,7 +50,7 @@ class LogoutServiceTest {
     }
 
     @Test
-    public void testLogoutNoAuthHeader() {
+     void testLogoutNoAuthHeader() {
 
         when(request.getHeader("Authorization")).thenReturn(null);
 
@@ -63,7 +63,7 @@ class LogoutServiceTest {
     }
 
     @Test
-    public void testLogoutInvalidAuthHeader() {
+     void testLogoutInvalidAuthHeader() {
 
         when(request.getHeader("Authorization")).thenReturn("Invalid jwt-token");
 
@@ -76,7 +76,7 @@ class LogoutServiceTest {
     }
 
     @Test
-    public void testLogoutNoTokenFound() {
+     void testLogoutNoTokenFound() {
 
         when(request.getHeader("Authorization")).thenReturn("Bearer jwt-token");
         when(tokenRepository.findByUserToken(anyString())).thenReturn(Optional.empty());

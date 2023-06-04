@@ -12,9 +12,10 @@ import org.springframework.test.util.ReflectionTestUtils;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @ExtendWith(MockitoExtension.class)
-public class JwtServiceTest {
+class JwtServiceTest {
 
     @InjectMocks
     private JwtService jwtService;
@@ -33,7 +34,7 @@ public class JwtServiceTest {
     }
 
     @Test
-    public void testGenerateToken() {
+     void testGenerateToken() {
         String token = jwtService.generateToken(user);
         String username = jwtService.extractUsername(token);
         assertEquals("test@test.fr", username);
@@ -50,6 +51,6 @@ public class JwtServiceTest {
     void isTokenValid() {
         String token = jwtService.generateToken(user);
         boolean isValid = jwtService.isTokenValid(token, user);
-        assertEquals(true, isValid);
+        assertTrue(isValid);
     }
 }
