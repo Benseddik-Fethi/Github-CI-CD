@@ -16,6 +16,7 @@ import java.io.Serial;
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.List;
+import java.util.UUID;
 
 @Getter
 @Setter
@@ -24,9 +25,6 @@ import java.util.List;
 @AllArgsConstructor
 @Entity
 @Table(name = "users")
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name="user_type",
-        discriminatorType = DiscriminatorType.STRING)
 public class User implements UserDetails, Serializable {
 
 
@@ -58,8 +56,8 @@ public class User implements UserDetails, Serializable {
     @JsonIgnore
     private String password;
 
-    @Column(name = "uuid", nullable = false, length = 50, unique = true)
-    private String uuid;
+    @Column(name = "uuid", nullable = false, unique = true)
+    private UUID uuid;
 
     @Enumerated(EnumType.STRING)
     private List<Role> roles;
@@ -104,6 +102,6 @@ public class User implements UserDetails, Serializable {
 
     @PrePersist
     public void prePersist() {
-        uuid = java.util.UUID.randomUUID().toString();
+        uuid = java.util.UUID.randomUUID();
     }
 }
