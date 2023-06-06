@@ -1,5 +1,6 @@
-package fr.benseddik.planning.config;
+package fr.benseddik.planning.security;
 
+import fr.benseddik.planning.config.JwtAuthenticationFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

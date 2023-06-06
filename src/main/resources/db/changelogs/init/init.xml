@@ -1,0 +1,127 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.18.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <changeSet id="1686026943814-1"
+               author="fethibenseddik (generated)">
+        <createTable tableName="token">
+            <column name="token_id"
+                    type="INTEGER">
+                <constraints nullable="false"
+                             primaryKey="true"
+                             primaryKeyName="token_pkey"/>
+            </column>
+            <column name="is_expired"
+                    type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_revoked"
+                    type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="token_type"
+                    type="VARCHAR(255)"/>
+            <column name="user_token"
+                    type="VARCHAR(255)"/>
+            <column name="user_id"
+                    type="INTEGER"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1686026943814-2"
+               author="fethibenseddik (generated)">
+        <createTable tableName="users">
+            <column name="user_id"
+                    type="INTEGER">
+                <constraints nullable="false"
+                             primaryKey="true"
+                             primaryKeyName="users_pkey"/>
+            </column>
+            <column name="email"
+                    type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="firstname"
+                    type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="lastname"
+                    type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="password"
+                    type="VARCHAR(60)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="roles"
+                    type="VARCHAR[]"/>
+            <column name="uuid"
+                    type="UUID">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by"
+                    type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_date"
+                    type="TIMESTAMP WITH TIME ZONE"/>
+            <column name="last_modified_by"
+                    type="VARCHAR(50)"/>
+            <column name="last_modified_date"
+                    type="TIMESTAMP WITH TIME ZONE"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1686026943814-3"
+               author="fethibenseddik (generated)">
+        <addUniqueConstraint columnNames="user_token"
+                             constraintName="uk_35ol05cnub21iwnfdv3dpptax"
+                             tableName="token"/>
+    </changeSet>
+    <changeSet id="1686026943814-4"
+               author="fethibenseddik (generated)">
+        <addUniqueConstraint columnNames="email"
+                             constraintName="uk_6dotkott2kjsp8vw4d0m25fb7"
+                             tableName="users"/>
+    </changeSet>
+    <changeSet id="1686026943814-5"
+               author="fethibenseddik (generated)">
+        <addUniqueConstraint columnNames="uuid"
+                             constraintName="uk_6km2m9i3vjuy36rnvkgj1l61s"
+                             tableName="users"/>
+    </changeSet>
+    <changeSet id="1686026943814-6"
+               author="fethibenseddik (generated)">
+        <createSequence cacheSize="1"
+                        cycle="false"
+                        dataType="bigint"
+                        incrementBy="1"
+                        maxValue="9223372036854775807"
+                        minValue="1"
+                        sequenceName="token_seq"
+                        startValue="1000"/>
+    </changeSet>
+    <changeSet id="1686026943814-7"
+               author="fethibenseddik (generated)">
+        <createSequence cacheSize="1"
+                        cycle="false"
+                        dataType="bigint"
+                        incrementBy="1"
+                        maxValue="9223372036854775807"
+                        minValue="1"
+                        sequenceName="user_seq"
+                        startValue="1000"/>
+    </changeSet>
+    <changeSet id="1686026943814-8"
+               author="fethibenseddik (generated)">
+        <addForeignKeyConstraint baseColumnNames="user_id"
+                                 baseTableName="token"
+                                 constraintName="fkj8rfw4x0wjjyibfqq566j4qng"
+                                 onDelete="NO ACTION"
+                                 onUpdate="NO ACTION"
+                                 referencedColumnNames="user_id"
+                                 referencedTableName="users"/>
+    </changeSet>
+
+</databaseChangeLog>

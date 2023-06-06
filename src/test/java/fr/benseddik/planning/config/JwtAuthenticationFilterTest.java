@@ -1,5 +1,6 @@
 package fr.benseddik.planning.config;
 
+
 import fr.benseddik.planning.domain.Token;
 import fr.benseddik.planning.domain.User;
 import fr.benseddik.planning.domain.enumeration.Role;

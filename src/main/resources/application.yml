@@ -6,13 +6,16 @@ spring:
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: none
     show-sql: true
     properties:
       hibernate:
         format_sql: true
     database: postgresql
     database-platform: org.hibernate.dialect.PostgreSQLDialect
+  liquibase:
+    change-log: classpath:db/db.changelog-master.xml
+    enabled: true
 application:
   security:
     jwt:
@@ -20,3 +23,8 @@ application:
       expiration-time: 86400000 # 1 day
       refresh-token:
         expiration-time: 2592000000 # 30 days
+
+logging:
+  level:
+    liquibase: INFO
+    fr.benseddik: DEBUG

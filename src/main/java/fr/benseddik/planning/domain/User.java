@@ -3,6 +3,7 @@ package fr.benseddik.planning.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import fr.benseddik.planning.domain.enumeration.Role;
+import fr.benseddik.planning.utils.annotation.Password;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -25,7 +26,7 @@ import java.util.UUID;
 @AllArgsConstructor
 @Entity
 @Table(name = "users")
-public class User implements UserDetails, Serializable {
+public class User extends AbstractAuditingEntity implements UserDetails, Serializable {
 
 
     @Serial
@@ -54,6 +55,7 @@ public class User implements UserDetails, Serializable {
     @Size(min = 8, max = 60)
     @Column(name = "password", nullable = false)
     @JsonIgnore
+    @Password
     private String password;
 
     @Column(name = "uuid", nullable = false, unique = true)
