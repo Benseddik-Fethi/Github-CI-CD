@@ -45,10 +45,10 @@ public class JwtService {
             Map<String, Object> extraClaims,
             User user
     ) {
-return buildToken(
-        extraClaims,
-        user,
-        jwtExpirationTime);
+        return buildToken(
+                extraClaims,
+                user,
+                jwtExpirationTime);
     }
 
     private String buildToken(Map<String, Object> extraClaims,
@@ -64,7 +64,7 @@ return buildToken(
                 .compact();
     }
 
-    public String generateRefreshToken(User user){
+    public String generateRefreshToken(User user) {
         return buildToken(
                 new HashMap<>(),
                 user,

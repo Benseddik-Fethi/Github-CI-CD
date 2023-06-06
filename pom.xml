@@ -23,7 +23,7 @@
             src/main/java/fr/benseddik/planning/dto/**/*,
             src/main/java/fr/benseddik/planning/error/**/*,
             src/main/java/fr/benseddik/planning/utils/**/*,
-            src/main/java/fr/benseddik/planning/config/Constants.java
+            src/main/java/fr/benseddik/planning/config/Constants.java,
             **/GithubCiCdApplication.java
         </sonar.coverage.exclusions>
         <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
