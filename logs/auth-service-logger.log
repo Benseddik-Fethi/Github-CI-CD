@@ -681,3 +681,43 @@ java.nio.channels.AsynchronousCloseException: null
 2023-06-06 08:11:25,598 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
 2023-06-06 08:11:25,601 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started GithubCiCdApplication in 0.808 seconds (process running for 454.105)
 2023-06-06 08:11:25,602 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2023-06-06 08:16:24,081 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-06 08:16:24,082 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-2 - Shutdown initiated...
+2023-06-06 08:16:24,083 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-2 - Shutdown completed.
+2023-06-06 08:16:25,221 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-06-06 08:16:25,243 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting GithubCiCdApplication using Java 17.0.7 with PID 76242 (/Users/fethibenseddik/Workspace/Perso/Github/Github-CI-CD/target/classes started by fethibenseddik in /Users/fethibenseddik/Workspace/Perso/Github/Github-CI-CD)
+2023-06-06 08:16:25,243 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v3.1.0, Spring v6.0.9
+2023-06-06 08:16:25,244 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-06-06 08:16:25,269 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-06-06 08:16:25,270 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-06-06 08:16:25,636 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-06 08:16:25,667 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 27 ms. Found 2 JPA repository interfaces.
+2023-06-06 08:16:25,982 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-06-06 08:16:25,986 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-06 08:16:25,987 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2023-06-06 08:16:25,987 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-06 08:16:26,013 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-06-06 08:16:26,013 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 743 ms
+2023-06-06 08:16:26,091 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-06 08:16:26,113 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-06-06 08:16:26,114 INFO org.hibernate.cfg.Environment [restartedMain] HHH000406: Using bytecode reflection optimizer
+2023-06-06 08:16:26,162 INFO org.hibernate.bytecode.internal.BytecodeProviderInitiator [restartedMain] HHH000021: Bytecode provider name : bytebuddy
+2023-06-06 08:16:26,213 INFO org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-06 08:16:26,221 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2023-06-06 08:16:26,322 INFO com.zaxxer.hikari.pool.HikariPool [restartedMain] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@be55a0
+2023-06-06 08:16:26,323 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2023-06-06 08:16:26,338 INFO org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl [restartedMain] HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@28e2364b
+2023-06-06 08:16:26,442 INFO org.hibernate.bytecode.internal.BytecodeProviderInitiator [restartedMain] HHH000021: Bytecode provider name : bytebuddy
+2023-06-06 08:16:26,790 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-06 08:16:26,792 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-06 08:16:26,958 INFO org.springframework.data.jpa.repository.query.QueryEnhancerFactory [restartedMain] Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-06-06 08:16:27,149 DEBUG org.springframework.web.filter.GenericFilterBean [restartedMain] Filter 'jwtAuthenticationFilter' configured for use
+2023-06-06 08:16:27,267 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-06 08:16:27,518 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@25ef4d32, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1cbb3f16, org.springframework.security.web.context.SecurityContextHolderFilter@3fe9983c, org.springframework.security.web.header.HeaderWriterFilter@4d7346a, org.springframework.security.web.authentication.logout.LogoutFilter@6e35f872, fr.benseddik.planning.config.JwtAuthenticationFilter@77fa072d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5de04923, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5d00c439, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6cba7ba0, org.springframework.security.web.session.SessionManagementFilter@34aacad4, org.springframework.security.web.access.ExceptionTranslationFilter@a1711f1, org.springframework.security.web.access.intercept.AuthorizationFilter@31310b82]
+2023-06-06 08:16:27,747 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-06-06 08:16:27,762 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2023-06-06 08:16:27,770 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-06 08:16:27,778 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started GithubCiCdApplication in 2.789 seconds (process running for 3.061)
+2023-06-06 08:16:30,639 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-06 08:16:30,641 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-06-06 08:16:30,642 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
