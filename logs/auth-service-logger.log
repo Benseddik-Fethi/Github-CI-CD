@@ -634,3 +634,50 @@ java.nio.channels.AsynchronousCloseException: null
 2023-06-06 08:03:54,426 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
 2023-06-06 08:03:54,439 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
 2023-06-06 08:03:54,448 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started GithubCiCdApplication in 2.693 seconds (process running for 2.945)
+2023-06-06 08:11:24,711 INFO org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-06-06 08:11:24,727 INFO org.apache.juli.logging.DirectJDKLog [Thread-5] Pausing ProtocolHandler ["http-nio-8080"]
+2023-06-06 08:11:24,727 INFO org.apache.juli.logging.DirectJDKLog [Thread-5] Stopping service [Tomcat]
+2023-06-06 08:11:24,730 WARN org.apache.juli.logging.DirectJDKLog [Thread-5] The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.7/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.7/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.7/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+ java.base@17.0.7/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@17.0.7/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.7/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.7/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.7/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.7/java.lang.Thread.run(Thread.java:833)
+2023-06-06 08:11:24,731 INFO org.apache.juli.logging.DirectJDKLog [Thread-5] Stopping ProtocolHandler ["http-nio-8080"]
+2023-06-06 08:11:24,734 INFO org.apache.juli.logging.DirectJDKLog [Thread-5] Destroying ProtocolHandler ["http-nio-8080"]
+2023-06-06 08:11:24,738 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Thread-5] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-06 08:11:24,740 INFO com.zaxxer.hikari.HikariDataSource [Thread-5] HikariPool-1 - Shutdown initiated...
+2023-06-06 08:11:24,743 INFO com.zaxxer.hikari.HikariDataSource [Thread-5] HikariPool-1 - Shutdown completed.
+2023-06-06 08:11:24,806 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting GithubCiCdApplication using Java 17.0.7 with PID 76082 (/Users/fethibenseddik/Workspace/Perso/Github/Github-CI-CD/target/classes started by fethibenseddik in /Users/fethibenseddik/Workspace/Perso/Github/Github-CI-CD)
+2023-06-06 08:11:24,807 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v3.1.0, Spring v6.0.9
+2023-06-06 08:11:24,807 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-06-06 08:11:24,896 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-06 08:11:24,903 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 6 ms. Found 2 JPA repository interfaces.
+2023-06-06 08:11:24,992 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-06-06 08:11:24,993 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2023-06-06 08:11:24,993 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2023-06-06 08:11:24,993 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-06 08:11:24,999 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-06-06 08:11:24,999 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 191 ms
+2023-06-06 08:11:25,039 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-06 08:11:25,044 INFO org.hibernate.bytecode.internal.BytecodeProviderInitiator [restartedMain] HHH000021: Bytecode provider name : bytebuddy
+2023-06-06 08:11:25,044 INFO org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-06 08:11:25,045 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Starting...
+2023-06-06 08:11:25,081 INFO com.zaxxer.hikari.pool.HikariPool [restartedMain] HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@41a52e70
+2023-06-06 08:11:25,081 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Start completed.
+2023-06-06 08:11:25,084 INFO org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl [restartedMain] HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@15e5fabb
+2023-06-06 08:11:25,097 INFO org.hibernate.bytecode.internal.BytecodeProviderInitiator [restartedMain] HHH000021: Bytecode provider name : bytebuddy
+2023-06-06 08:11:25,139 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-06 08:11:25,140 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-06 08:11:25,239 DEBUG org.springframework.web.filter.GenericFilterBean [restartedMain] Filter 'jwtAuthenticationFilter' configured for use
+2023-06-06 08:11:25,309 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-06 08:11:25,459 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7600494f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6af70c4f, org.springframework.security.web.context.SecurityContextHolderFilter@4f3b38c0, org.springframework.security.web.header.HeaderWriterFilter@34d05365, org.springframework.security.web.authentication.logout.LogoutFilter@7d6c20e0, fr.benseddik.planning.config.JwtAuthenticationFilter@6809df6e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5eea1110, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@68173ad3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1f645b71, org.springframework.security.web.session.SessionManagementFilter@4b0f465, org.springframework.security.web.access.ExceptionTranslationFilter@2786c8c7, org.springframework.security.web.access.intercept.AuthorizationFilter@2290a1cd]
+2023-06-06 08:11:25,589 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-06-06 08:11:25,597 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2023-06-06 08:11:25,598 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-06 08:11:25,601 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started GithubCiCdApplication in 0.808 seconds (process running for 454.105)
+2023-06-06 08:11:25,602 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged

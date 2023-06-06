@@ -21,6 +21,7 @@
         <sonar.coverage.exclusions>
             src/main/java/fr/benseddik/planning/domain/*,
             src/main/java/fr/benseddik/planning/dto/**/*,
+            src/main/java/fr/benseddik/planning/error/**/*,
             **/GithubCiCdApplication.java
         </sonar.coverage.exclusions>
         <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>

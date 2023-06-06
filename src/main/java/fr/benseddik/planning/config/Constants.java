@@ -18,7 +18,7 @@ public final class Constants {
 
 
     //RESPONSES
-    public static final String BAD_PASSWORD_MESSAGE = "Mauvais mot de passe";
+    public static final String BAD_MESSAGE = "Mauvais mot de passe";
     public static final String BAD_USERNAME_MESSAGE = "Mauvais nom d'utilisateur";
     public static final Object FORBIDDEN_MESSAGE = "Vous n'avez pas les droits pour accéder à cette ressource";
     public static final Object DISABLED_MESSAGE = "Votre compte est désactivé";
