@@ -62,14 +62,14 @@ public class User extends AbstractAuditingEntity implements UserDetails, Seriali
     private UUID uuid;
 
     @Enumerated(EnumType.STRING)
-    private List<Role> roles;
+    private Role roles;
 
     @OneToMany(mappedBy = "user")
     private List<Token> tokens;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return roles.stream().map(role -> new SimpleGrantedAuthority(role.name())).toList();
+        return List.of(new SimpleGrantedAuthority(roles.name()));
     }
 
     @Override

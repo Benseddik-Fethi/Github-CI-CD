@@ -18,12 +18,14 @@ spring:
     enabled: true
 application:
   security:
+    cors:
+      origin: http://localhost:5173
+      max-age: 3600
     jwt:
       secret-key: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
       expiration-time: 86400000 # 1 day
       refresh-token:
         expiration-time: 2592000000 # 30 days
-
 logging:
   level:
     liquibase: INFO

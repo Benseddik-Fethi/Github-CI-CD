@@ -56,7 +56,7 @@ public class JwtService {
         return Jwts
                 .builder()
                 .setClaims(extraClaims)
-                .claim("roles", user.getRoles().stream().map(Enum::name).toList())
+                .claim("roles", user.getRoles())
                 .setSubject(user.getUsername())
                 .setIssuedAt(new Date(System.currentTimeMillis()))
                 .setExpiration(new Date(System.currentTimeMillis() + expirationTime))

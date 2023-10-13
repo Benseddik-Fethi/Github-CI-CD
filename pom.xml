@@ -18,6 +18,7 @@
         <jacoco.version>0.8.8</jacoco.version>
         <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
         <sonar.scm.disabled>true</sonar.scm.disabled>
+        <liquibase.version>4.19.0</liquibase.version>
         <sonar.coverage.exclusions>
             src/main/java/fr/benseddik/planning/domain/*,
             src/main/java/fr/benseddik/planning/dto/**/*,
@@ -72,6 +73,11 @@
             <scope>runtime</scope>
         </dependency>
         <dependency>
+            <groupId>org.liquibase</groupId>
+            <artifactId>liquibase-core</artifactId>
+            <version>${liquibase.version}</version>
+        </dependency>
+        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
@@ -79,7 +85,7 @@
         <dependency>
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct</artifactId>
-            <version>1.5.5.Final</version>
+            <version>${mapstruct.version}</version>
         </dependency>
         <dependency>
             <groupId>org.passay</groupId>
