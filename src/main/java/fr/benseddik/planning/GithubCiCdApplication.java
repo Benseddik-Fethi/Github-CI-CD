@@ -8,7 +8,6 @@ public class GithubCiCdApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(GithubCiCdApplication.class, args);
-        
     }
 
 }
