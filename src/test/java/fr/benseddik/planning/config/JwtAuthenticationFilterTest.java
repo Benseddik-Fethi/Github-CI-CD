@@ -61,7 +61,7 @@ class JwtAuthenticationFilterTest {
                 .password("testPassword")
                 .firstname("testFirstname")
                 .lastname("testLastname")
-                .roles(List.of(Role.ROLE_USER))
+                .roles(Role.ROLE_USER)
                 .build();
 
         when(request.getHeader("Authorization")).thenReturn("Bearer " + jwt);

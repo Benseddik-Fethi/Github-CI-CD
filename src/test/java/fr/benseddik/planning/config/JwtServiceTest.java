@@ -26,7 +26,7 @@ class JwtServiceTest {
     public void setUp() {
         user = new User();
         user.setEmail("test@test.fr");
-        user.setRoles(List.of(Role.ROLE_USER));
+        user.setRoles(Role.ROLE_USER);
 
         ReflectionTestUtils.setField(jwtService, "secretKey", "404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970");
         ReflectionTestUtils.setField(jwtService, "jwtExpirationTime", 600000L);

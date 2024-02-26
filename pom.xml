@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.1.0</version>
+        <version>3.2.2</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>fr.benseddik</groupId>
@@ -15,10 +15,10 @@
     <description>Github-CI-CD</description>
     <properties>
         <!-- JaCoCo Properties -->
-        <jacoco.version>0.8.8</jacoco.version>
+        <jacoco.version>0.8.11</jacoco.version>
         <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
         <sonar.scm.disabled>true</sonar.scm.disabled>
-        <liquibase.version>4.19.0</liquibase.version>
+        <liquibase.version>4.25.0</liquibase.version>
         <sonar.coverage.exclusions>
             src/main/java/fr/benseddik/planning/domain/*,
             src/main/java/fr/benseddik/planning/dto/**/*,
@@ -37,6 +37,9 @@
         <lombok-mapstruct-binding>0.2.0</lombok-mapstruct-binding>
         <mapstruct.version>1.5.5.Final</mapstruct.version>
         <lombok.version>1.18.26</lombok.version>
+        <postgresql.version>42.7.2</postgresql.version>
+        <jayway.jsonpath.version>2.9.0</jayway.jsonpath.version>
+        <spring.security.core.version>6.2.2</spring.security.core.version>
         <java.version>17</java.version>
     </properties>
     <dependencies>
@@ -51,6 +54,12 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-core -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core</artifactId>
+            <version>${spring.security.core.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -120,6 +129,12 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.jayway.jsonpath</groupId>
+            <artifactId>json-path</artifactId>
+            <version>${jayway.jsonpath.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>

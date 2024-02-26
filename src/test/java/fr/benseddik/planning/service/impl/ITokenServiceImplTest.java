@@ -38,7 +38,7 @@ class ITokenServiceImplTest {
                 .lastname("Doe")
                 .email("johndoe@example.com")
                 .password("password")
-                .roles(List.of(Role.ROLE_USER))
+                .roles(Role.ROLE_USER)
                 .build();
         token = Token.builder()
                 .user(user)
