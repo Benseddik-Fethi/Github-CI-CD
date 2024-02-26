@@ -26,7 +26,7 @@ class SecurityUtilsTest {
                 .firstname(username)
                 .email(username)
                 .password("password")
-                .roles(List.of(Role.ROLE_USER))
+                .roles(Role.ROLE_USER)
                 .build();
 
         Authentication authentication = new UsernamePasswordAuthenticationToken(userDetails, null);
@@ -75,7 +75,7 @@ class SecurityUtilsTest {
                 .firstname(username)
                 .email(username)
                 .password("password")
-                .roles(List.of(Role.ROLE_USER))
+                .roles(Role.ROLE_USER)
                 .build();
 
         Authentication authentication = new UsernamePasswordAuthenticationToken(userDetails, null);

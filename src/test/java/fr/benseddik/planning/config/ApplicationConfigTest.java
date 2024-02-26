@@ -42,7 +42,7 @@ class ApplicationConfigTest {
                 .password("testPassword")
                 .firstname("testFirstname")
                 .lastname("testLastname")
-                .roles(List.of(Role.ROLE_USER))
+                .roles(Role.ROLE_USER)
                 .build();
         when(userRepository.findByEmail(anyString())).thenReturn(Optional.of(user));
         UserDetailsService userDetailsService = applicationConfig.userDetailsService();
@@ -58,7 +58,7 @@ class ApplicationConfigTest {
                 .password("testPassword")
                 .firstname("testFirstname")
                 .lastname("testLastname")
-                .roles(List.of(Role.ROLE_USER))
+                .roles(Role.ROLE_USER)
                 .build();
         lenient().when(userRepository.findByEmail(anyString())).thenReturn(Optional.of(user));
         UserDetailsService userDetailsService = applicationConfig.userDetailsService();

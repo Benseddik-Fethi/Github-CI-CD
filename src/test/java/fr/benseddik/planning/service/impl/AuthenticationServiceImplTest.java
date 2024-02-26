@@ -58,7 +58,7 @@ class AuthenticationServiceImplTest {
 
     @BeforeEach
     void setUp() {
-        registerRequest = new RegisterRequest("John", "Doe", "johndoe@example.com", "password", List.of(Role.ROLE_USER));
+        registerRequest = new RegisterRequest("John", "Doe", "johndoe@example.com", "password", Role.ROLE_USER);
         user = User.builder()
                 .firstname(registerRequest.getFirstname())
                 .lastname(registerRequest.getLastname())
